@@ -1,0 +1,88 @@
+.new-tweet {
+  height: 160px;
+  background-color: #c2c2d6;
+  border-radius: 3px;
+  padding: 10px;
+  margin: auto;
+  display: none;
+
+}
+textarea {
+  width: 100%;
+  border-radius: 1px;
+  padding: 8px;
+
+}
+
+.counter {
+  float: right;
+}
+
+.container .new-tweet h2 {
+  border-bottom: 1px solid;
+  margin-top: 0px;
+}
+
+#contain-tweets {
+  margin: 10px 0px 10px 0px;
+  border-radius: 7px;
+}
+
+#contain-tweets article {
+  height: 100%;
+  background-color: white;
+  margin: 10px 0px 10px 0px;
+  border-radius: 3px;
+}
+
+.tweeter-handle {
+  float: right;
+  margin: 0px;
+}
+
+#contain-tweets header {
+  height: 60px;
+  border-radius: 1px;
+  padding: 5px 10px 0px 10px;
+  background-color: #bfbfbf;
+}
+
+#contain-tweets footer {
+  height: 30px;
+  border-top: 1px dashed #bfbfbf;
+  padding: 5px 10px 10px 10px;
+}
+
+#contain-tweets footer div {
+  float: right;
+  position: relative;
+}
+
+.profile-pic {
+  float: left;
+  border-radius: 5px;
+
+}
+
+.posted-profile-name {
+  float: left;
+  font-weight: bold;
+  margin: 0px 0px 0px 100px;
+
+}
+
+.post {
+  margin: 30px 0px;
+  padding: 0px 8px;
+  text-align: left;
+}
+
+.footer-text {
+  margin: 0px;
+}
+
+footer .fa:hover {
+    color: cyan;
+}
+
+
