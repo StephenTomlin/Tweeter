@@ -25,11 +25,10 @@ body {
   width: 350px;
   margin: 140px auto 0 auto;
   background-color: white;
-  padding: 1em 2em;
 }
 
 .tweet {
-  margin-top: 40px;
+  /*margin-top: 40px;*/
   border: 2px solid #bfbfbf;
   word-wrap: break-word;
 }

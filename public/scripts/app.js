@@ -29,12 +29,13 @@ function createTweetElement(tweet) {
         <p>${tweet.content.text}</p>
       </section>
       <footer>
-        <p class="footer-text">${timeSince(tweet.created_at)}</p>
+
         <div>
           <i class="fa fa-flag" aria-hidden="true"></i>
           <i class="fa fa-retweet" aria-hidden="true"></i>
           <i class="fa fa-heart" aria-hidden="true"></i>
         </div>
+        <p class="footer-text">${timeSince(tweet.created_at)}</p>
        </footer>
     </article>`
   );
@@ -87,6 +88,4 @@ function timeSince (pre) {
    return (`${Math.floor(weeks)} weeks ago.`)
   }
 
-  }
-
-postedTime(146111395988)
+}
