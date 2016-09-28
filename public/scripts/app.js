@@ -17,7 +17,6 @@ loadTweets();
 
 
 function createTweetElement(tweet) {
-  console.log(tweet)
   let $tweet = $(
     `<article class="tweet">
       <header>
@@ -51,12 +50,19 @@ function renderTweets(tweetDatabase) {
   });
 };
 $("form").submit(function(ev) {
-  event.preventDefault();
+  let entryLength = $(this.text).val().length
+  if (entryLength >= 140) {
+    alert("Your entry is too long!");
+    return
+  }
+  else if (entryLength === 0 || entryLength === "") {
+    alert("Your entry is too short!");
+    return
+  }
   let req_body = {};
   $(this).serializeArray().forEach((field) => {
     req_body[field.name] = field.value;
   })
-  console.log(req_body)
   $.ajax({
     url: '/tweets',
     method: 'POST',
@@ -74,8 +80,6 @@ function timeSince (pre) {
   var hours = minutes / 60;
   var days = hours / 24;
   var weeks = days / 7;
-  console.log(`days ${Math.floor(days)} ago`)
-  console.log(new Date(pre))
   if (minutes < 30) {
    return (`a few moments ago.`)
   } else if (minutes < 59) {

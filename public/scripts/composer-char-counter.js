@@ -1,14 +1,5 @@
 'use strict'
 
-// function $(query) {
-//   return document.querySelector(query);
-// }
-
-// function $$(query) {
-//   return document.querySelectorAll(query);
-// }
-
-
 let $text = $('#text');
 let $counter = $('#countdwn');
 
@@ -25,11 +16,15 @@ $(document).ready($text.on('input', function(ev){
 $(document).ready($("form").submit(function(event){
   event.preventDefault();
   let entryLength = $(this.text).val().length
-  if (entryLength > 140) {
+  if (entryLength >= 140) {
+    event.preventDefault();
     alert("Your entry is too long!");
+    return
   }
-  else if (entryLength ===0 || entryLength === "") {
+  else if (entryLength === 0 || entryLength === "") {
+    event.preventDefault();
     alert("Your entry is too short!");
+    return
   }
 }));
 
@@ -40,11 +35,4 @@ $(".compose-button").click(function() {
     input.select();
   })
 })
-// $(document).ready(function(){
-//    {
-//
-//     let new_tweet_body = {}
-//     new_tweet_body = $(this).serializeArray();
-//     onsole.log($(this).serializeArray());
-//   });
-// });
+
